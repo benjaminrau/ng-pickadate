@@ -78,6 +78,16 @@ AngularJS directives for [pickadate.js](http://amsul.ca/pickadate.js/).
 
         <input type="text" pick-a-date="startDate" max-date="endDate"/>
         <input type="text" pick-a-date="endDate" min-date="startDate"/>
+        
+4. Watch the date in your controller
+
+    ```js
+    $scope.$watch(
+      'startDate',
+      function() {}, 
+      true                        // Set this to true to force angular to check object equality. Without this watch wont fire!
+    );
+    ```
 
 ### Options
 
